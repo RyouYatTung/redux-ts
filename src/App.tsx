@@ -1,11 +1,15 @@
-import { useState } from "react";
-import "./App.css";
+import { Provider } from "react-redux";
+import { store } from "./state";
+import RepositoriesList from "./components/RepositoriesList";
 
 function App() {
   return (
-    <>
-      <h1>h1</h1>
-    </>
+    <Provider store={store}>
+      <div>
+        <h1>Seach for a package</h1>
+        <RepositoriesList />
+      </div>
+    </Provider>
   );
 }
 

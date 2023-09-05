@@ -7,10 +7,16 @@ interface RepositoriesState {
   data: string[];
 }
 
+const InitialState = {
+  loading: false,
+  error: null,
+  data: [],
+};
+
 //stateの中にdata/loading/errorの状態
 //actionはapiのデータ
 const reducer = (
-  state: RepositoriesState,
+  state: RepositoriesState = InitialState,
   action: Action
 ): RepositoriesState => {
   //switch (action.type) > return state
